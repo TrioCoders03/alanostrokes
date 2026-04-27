@@ -5,7 +5,7 @@ function Lightbox({ art, onClose, onAdd }) {
       <div className="bg-cream max-w-3xl w-full grid md:grid-cols-2 shadow-frame" onClick={e=>e.stopPropagation()}>
         <div className="bg-parchment p-3">
           <div className="aspect-[4/5] overflow-hidden">
-            <PaintingPlaceholder seed={art.id} />
+            <PaintingPlaceholder seed={art.id} image={art.image} />
           </div>
         </div>
         <div className="p-7 flex flex-col">

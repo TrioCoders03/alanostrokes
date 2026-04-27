@@ -14,7 +14,7 @@ function CartDrawer({ open, items, onClose, onRemove }) {
           ) : items.map((it,idx)=>(
             <div key={idx} className="flex gap-3 py-3 border-b border-walnut/10">
               <div className="w-16 h-20 overflow-hidden bg-parchment p-1">
-                <PaintingPlaceholder seed={it.id}/>
+                <PaintingPlaceholder seed={it.id} image={it.image}/>
               </div>
               <div className="flex-1">
                 <div className="flex justify-between gap-2">

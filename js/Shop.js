@@ -3,7 +3,7 @@ function ShopCard({ art, onAdd }) {
   return (
     <div className="bg-cream p-3 shadow-frame border border-walnut/5 flex flex-col">
       <div className="aspect-[4/5] overflow-hidden border border-walnut/10">
-        <PaintingPlaceholder seed={art.id} />
+        <PaintingPlaceholder seed={art.id} image={art.image} />
       </div>
       <div className="p-3 flex-1 flex flex-col">
         <div className="flex items-baseline justify-between gap-2">
@@ -26,8 +26,8 @@ function ShopCard({ art, onAdd }) {
   );
 }
 
-function Shop({ onAdd }) {
-  const featured = ARTWORKS.slice(0, 6);
+function Shop({ artworks, onAdd }) {
+  const featured = artworks.filter(a => a.available).slice(0, 6);
   return (
     <section id="shop" className="py-20 px-5 bg-parchment/60 border-y border-walnut/10">
       <div className="max-w-6xl mx-auto">

@@ -1,8 +1,8 @@
-function Gallery({ onOpen }) {
+function Gallery({ artworks, onOpen }) {
   const [cat, setCat] = useState('All');
   const items = useMemo(
-    () => cat==='All' ? ARTWORKS : ARTWORKS.filter(a=>a.category===cat),
-    [cat]
+    () => cat==='All' ? artworks : artworks.filter(a=>a.category===cat),
+    [cat, artworks]
   );
   return (
     <section id="gallery" className="py-20 px-5">
@@ -30,7 +30,7 @@ function Gallery({ onOpen }) {
               className="art-card text-left group">
               <div className="art-frame bg-parchment p-2.5 shadow-frame">
                 <div className="aspect-[4/5] overflow-hidden border border-walnut/10">
-                  <PaintingPlaceholder seed={a.id} />
+                  <PaintingPlaceholder seed={a.id} image={a.image} />
                 </div>
               </div>
               <div className="mt-3 px-1">

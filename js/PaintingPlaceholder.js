@@ -1,4 +1,6 @@
-function PaintingPlaceholder({ seed = 1, palette }) {
+function PaintingPlaceholder({ seed = 1, palette, image }) {
+  if (image) return <img src={image} alt="" className="w-full h-full object-cover block" />;
+
   const rng = (n) => {
     let x = Math.sin(seed * 9999 + n) * 10000;
     return x - Math.floor(x);
