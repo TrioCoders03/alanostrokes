@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Alano Strokes — Original Paintings, Made by Hand</title>
+<meta name="description" content="Original handcrafted paintings by an Indian artist. Curated gallery, ready-to-ship pieces, and custom commissions." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream:     '#F5EDE0',
+          parchment: '#EFE3D0',
+          terracotta:'#C97D5D',
+          sienna:    '#A85A3C',
+          sage:      '#8A9A7B',
+          walnut:    '#3E2C1C',
+          gold:      '#C9A86A',
+          ink:       '#2A1F14',
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'serif'],
+          hand:  ['"Caveat"', 'cursive'],
+          sans:  ['"Inter"', 'system-ui', 'sans-serif'],
+        },
+        boxShadow: {
+          frame: '0 25px 50px -20px rgba(62,44,28,0.35), 0 10px 20px -10px rgba(62,44,28,0.25)',
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased">
+<div id="root"></div>
+
+<!-- Utilities & data (plain JS, no JSX) -->
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+
+<!-- Components (JSX via Babel standalone) -->
+<script type="text/babel" src="js/PaintingPlaceholder.js"></script>
+<script type="text/babel" src="js/Logo.js"></script>
+<script type="text/babel" src="js/Nav.js"></script>
+<script type="text/babel" src="js/Hero.js"></script>
+<script type="text/babel" src="js/SectionHeader.js"></script>
+<script type="text/babel" src="js/Gallery.js"></script>
+<script type="text/babel" src="js/Shop.js"></script>
+<script type="text/babel" src="js/Commission.js"></script>
+<script type="text/babel" src="js/About.js"></script>
+<script type="text/babel" src="js/Testimonials.js"></script>
+<script type="text/babel" src="js/Footer.js"></script>
+<script type="text/babel" src="js/Lightbox.js"></script>
+<script type="text/babel" src="js/CartDrawer.js"></script>
+<script type="text/babel" src="js/App.js"></script>
+</body>
+</html>
