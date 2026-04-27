@@ -11,7 +11,7 @@ exports.handler = async function () {
     price: r.fields.Price,
     size: r.fields.Size,
     medium: r.fields.Medium,
-    image: r.fields.Image ? r.fields.Image[0].url : null,
+    image: r.fields.Attachment ? r.fields.Attachment[0].url : null,
     available: r.fields.Available || false,
   }));
   return {
