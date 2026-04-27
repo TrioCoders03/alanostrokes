@@ -7,7 +7,7 @@ exports.handler = async function () {
   const records = data.records.map((r, i) => ({
     id: i + 1,
     title: r.fields.Title,
-    category: r.fields.Category,
+    category: r.fields.Catagory,
     price: r.fields.Price,
     size: r.fields.Size,
     medium: r.fields.Medium,
