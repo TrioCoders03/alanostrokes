@@ -1,4 +1,5 @@
-function Hero() {
+function Hero({ artworks }) {
+  const latest = artworks.slice(-2);
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-5 pt-16 pb-20 grid md:grid-cols-2 gap-12 items-center">
@@ -25,12 +26,12 @@ function Hero() {
         <div className="relative reveal">
           <div className="absolute -top-4 -left-4 w-2/3 aspect-[4/5] rotate-[-5deg] bg-parchment p-3 shadow-frame">
             <div className="w-full h-full overflow-hidden border border-walnut/10">
-              <PaintingPlaceholder seed={2} />
+              <PaintingPlaceholder seed={2} image={latest[0]?.image} />
             </div>
           </div>
           <div className="ml-auto w-3/4 aspect-[4/5] rotate-[3deg] bg-parchment p-3 shadow-frame relative">
             <div className="w-full h-full overflow-hidden border border-walnut/10">
-              <PaintingPlaceholder seed={5} />
+              <PaintingPlaceholder seed={5} image={latest[1]?.image} />
             </div>
             <span className="absolute -bottom-4 -right-4 bg-terracotta text-cream font-hand text-lg px-4 py-1 rounded-full rotate-[-6deg] shadow-md">new this week</span>
           </div>

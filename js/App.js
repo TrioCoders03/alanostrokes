@@ -26,7 +26,7 @@ function App() {
   return (
     <div>
       <Nav cartCount={cart.length} onOpenCart={() => setCartOpen(true)} />
-      <Hero />
+      <Hero artworks={artworks} />
       {loading ? (
         <div className="py-32 text-center">
           <p className="font-serif text-2xl text-walnut/50">Loading paintings...</p>
