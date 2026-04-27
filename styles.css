@@ -1,4 +1,4 @@
-html, body { background:#F5EDE0; color:#2A1F14; }
+html, body { background:#F5EDE0; color:#2A1F14; scroll-behavior: smooth; }
 
 body::before {
   content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
